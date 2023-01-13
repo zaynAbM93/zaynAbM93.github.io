@@ -101,7 +101,7 @@ const projects = [
     title: "Portfolio",
     img: "assets/img/Software-1024x683.jpg",
     category:"js",
-    link: "https://rcatm.github.io/",
+    link: "https://zaynabm93.github.io/",
   },
   
 ];
