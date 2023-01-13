@@ -41,9 +41,6 @@ function erase() {
   }
 }
 
-
-
-
 /*header active buttons */
 
 function activatedHeaderBtn(section) {
@@ -53,16 +50,13 @@ function activatedHeaderBtn(section) {
   if (section) {
     section.classList.add("active-btn");
   }
-} 
+}
 
-document.querySelectorAll(".link").forEach(function (section){
-section.addEventListener("click", function() {
-  activatedHeaderBtn(section);
-})
-})
-
-
-
+document.querySelectorAll(".link").forEach(function (section) {
+  section.addEventListener("click", function () {
+    activatedHeaderBtn(section);
+  });
+});
 
 /*Portfolio category menu*/
 
@@ -77,7 +71,7 @@ const projects = [
     title: "Education Site",
     img: "assets/img/project-2.png",
     category: "web",
-    link:"https://reyaedu.github.io",
+    link: "https://reyaedu.github.io",
   },
   {
     title: "Simple Calculator",
@@ -100,10 +94,9 @@ const projects = [
   {
     title: "Portfolio",
     img: "assets/img/Software-1024x683.jpg",
-    category:"js",
+    category: "js",
     link: "https://zaynabm93.github.io/",
   },
-  
 ];
 
 function activateTheButton(project) {
@@ -127,7 +120,8 @@ function setButtonCategories() {
     ["all"]
   );
   const buttons = categories.map(function (category) {
-    const classList = category === "all" ? "category-btn active" : "category-btn";
+    const classList =
+      category === "all" ? "category-btn active" : "category-btn";
     return `<button class="${classList}" data-id=${category}>${category}</button>`;
   });
   categoryMenu.innerHTML = buttons.join("");
@@ -169,8 +163,6 @@ function displayProjects(projects) {
       .join("");
   }
 }
-
-
 
 document.addEventListener("DOMContentLoaded", function () {
   // On DOM Load initiate the effect
